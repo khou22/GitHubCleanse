@@ -1,12 +1,15 @@
 {
-  "name":"GitHub Cleanse",
+  "name":"Execute Order 66",
+  "short_name": "Order 66",
   "description":"For those people who have coworkers who swear a little bit too much in their commits...",
   "version":"0.66",
   "manifest_version": 2,
-  "options_page": "options.html",
   "permissions": [
     "storage"
   ],
+  "icons": { "16": "logo/icon16.png",
+           "48": "logo/icon48.png",
+          "128": "logo/icon128.png" },
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
