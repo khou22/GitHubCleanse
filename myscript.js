@@ -1,4 +1,4 @@
-console.log("Execute Order 66");
+console.log("Executing Order 66");
 var censoredWords = [
   {
     case: "who",
@@ -26,10 +26,11 @@ for (var k = 0; k < censoredWords.length; k++) {
       if (node.nodeType === 3) {
         var text = node.nodeValue;
         // console.log("Checking text:", text);
-      
+      // (?i)
         // console.log("Checking for", censoredWords[k].case);
         if (text.indexOf(censoredWords[k].case)) { // If contains
-          replacedText = text.split(censoredWords[k].case).join(censoredWords[k].replacement);
+          // replacedText = text.split(censoredWords[k].case).join(censoredWords[k].replacement);
+          replacedText= text.replace(new RegExp(censoredWords[k].case, 'gi'), censoredWords[k].replacement);
           element.replaceChild(document.createTextNode(replacedText), node);
         } else {
           // Did not find match
