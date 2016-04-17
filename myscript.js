@@ -1,18 +1,4 @@
 console.log("Executing Order 66");
-var censoredWords = [
-  {
-    case: "who",
-    replacement: "Kevin"
-  },
-  {
-    case: "coworkers",
-    replacement: "Sam"
-  },
-  {
-    case: "people",
-    replacement: "FAF"
-  }
-];
 
 var elements = document.getElementsByTagName('*');
 

@@ -3,10 +3,14 @@
   "description":"For those people who have coworkers who swear a little bit too much in their commits...",
   "version":"0.66",
   "manifest_version": 2,
+  "options_page": "options.html",
+  "permissions": [
+    "storage"
+  ],
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
-      "js": ["myscript.js"],
+      "js": ["swearWords.js", "myscript.js"],
       "run_at": "document_end"
     }
   ]
