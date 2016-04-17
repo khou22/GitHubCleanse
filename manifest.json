@@ -1,0 +1,13 @@
+{
+  "name":"GitHub Cleanse",
+  "description":"For those people who have coworkers who swear a little bit too much in their commits...",
+  "version":"0.66",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["myscript.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
